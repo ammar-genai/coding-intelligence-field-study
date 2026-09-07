@@ -1,5 +1,5 @@
-:HL["/coding-intelligence-field-study/_next/static/chunks/15ghjf62uunv9.css","style"]
-:HL["/coding-intelligence-field-study/_next/static/media/797e433ab948586e-s.p.08e28id.o-okb.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/coding-intelligence-field-study/_next/static/media/caa3a2e1cccd8315-s.p.09~u27dqhyhd6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/coding-intelligence-field-study/_next/static/chunks/05fj8ok9_k4o~.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"tasks","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"MnCjo94esw9Lw7V86SJl5"}
+:HL["/coding-intelligence-field-study/_next/static/media/22a5144ee8d83bca-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/coding-intelligence-field-study/_next/static/media/7d4881bb7e1bf84d-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/coding-intelligence-field-study/_next/static/css/a269fb31493eaf2c.css","style"]
+:HL["/coding-intelligence-field-study/_next/static/css/6d5478466173384e.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"tasks","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"7hqO0MSpKB2QF_8hdO_29"}

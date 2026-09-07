@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[55280,["/coding-intelligence-field-study/_next/static/chunks/0dbhjjzl8qfwv.js","/coding-intelligence-field-study/_next/static/chunks/061x3zw3uq~cn.js"],"AdaptiveRouting"]
-3:I[97367,["/coding-intelligence-field-study/_next/static/chunks/0dbhjjzl8qfwv.js"],"OutletBoundary"]
+2:I[7212,["234","static/chunks/app/adaptive-routing/page-39cb4eac95859d83.js"],"AdaptiveRouting"]
+3:I[484,[],"OutletBoundary"]
 4:"$Sreact.suspense"
-:HL["/coding-intelligence-field-study/_next/static/chunks/0g2bjtounhrkc.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/coding-intelligence-field-study/_next/static/chunks/0g2bjtounhrkc.css","precedence":"next"}],["$","script","script-0",{"src":"/coding-intelligence-field-study/_next/static/chunks/061x3zw3uq~cn.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"MnCjo94esw9Lw7V86SJl5"}
+:HL["/coding-intelligence-field-study/_next/static/css/832cc3be1a045f08.css","style"]
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/coding-intelligence-field-study/_next/static/css/832cc3be1a045f08.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7hqO0MSpKB2QF_8hdO_29"}
 5:null
