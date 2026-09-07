@@ -3,5 +3,5 @@
 3:I[484,[],"OutletBoundary"]
 4:"$Sreact.suspense"
 :HL["/coding-intelligence-field-study/_next/static/css/979e057e67b4d80d.css","style"]
-0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/coding-intelligence-field-study/_next/static/css/979e057e67b4d80d.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7hqO0MSpKB2QF_8hdO_29"}
+0:{"rsc":["$","$1","c",{"children":[["$","$L2",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/coding-intelligence-field-study/_next/static/css/979e057e67b4d80d.css","precedence":"next"}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"lJ-iT3YNeaOQRp3Gyt1lJ"}
 5:null
