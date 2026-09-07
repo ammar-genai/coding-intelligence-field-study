@@ -1,2 +1,2 @@
-:HL["/_next/static/chunks/15ghjf62uunv9.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"XI0MHAHtQAAkk8mqL9UXv"}
+:HL["/coding-intelligence-field-study/_next/static/chunks/15ghjf62uunv9.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"MnCjo94esw9Lw7V86SJl5"}
