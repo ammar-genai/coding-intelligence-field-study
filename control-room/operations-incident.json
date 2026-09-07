@@ -1,0 +1,67 @@
+{
+  "id": "operations-incident-2026-09-06",
+  "label": "Operations incident / Run 01",
+  "title": "One worker stalls. Four systems recover the work.",
+  "date": "2026-09-06–07",
+  "mode": "Recorded multi-assistant run",
+  "source": "benchmark/reports/Astra-operations-orchestration.md",
+  "sourceBlock": "operations-incident-2026-09-06T18-33-55-624Z",
+  "description": "A deliberately faulted recovery engine passed through Astra planning, Qwen implementation, Sonnet fallback, Opus review, Sol repair, and a Pi/GLM audit.",
+  "limitations": [
+    "This is a recorded run, not a currently executing live session.",
+    "Stage durations are summed; they are not project wall time because the user paused between stages.",
+    "OpenRouter charges are metered spend. Claude dollar values are subscription CLI equivalent-cost telemetry and were not billed API spend.",
+    "Codex subscription stages exposed no comparable dollar amount. Adapter token totals are not compared.",
+    "The Pi audit was intentionally read-only and could not execute the external evaluator."
+  ],
+  "stages": [
+    {
+      "id": "baseline", "role": "Incident gate", "assistant": "Independent harness", "model": "Node test runner", "state": "failed", "outcome": "FAIL · 4/8 external tests", "seconds": null, "meteredUsd": null, "subscriptionTelemetryUsd": null,
+      "title": "Seed four interacting recovery defects", "summary": "The isolated engine began with lost-update, stale-delivery, remote-regression, and interrupted-acknowledgement failures. The application workspace remained untouched.",
+      "evidence": ["Four of eight external tests failed before any model worked.", "The contract and baseline were hash-locked in the run manifest.", "The evaluator was copied outside the worker workspace before execution."],
+      "lesson": "A visible failing baseline makes the later acceptance result meaningful.", "dependsOn": []
+    },
+    {
+      "id": "plan", "role": "Diagnosis / plan", "assistant": "Codex", "model": "GPT-6 Astra", "state": "accepted", "outcome": "PASS · read-only", "seconds": 55.946, "meteredUsd": null, "subscriptionTelemetryUsd": null,
+      "title": "Astra finds all four root causes", "summary": "Astra traced expected-version conflicts, monotonic remote state, stale confirmation ordering, and recovery after a lost acknowledgement without changing the fixture.",
+      "evidence": ["Completed in 55.946 seconds.", "Read-only scope passed with zero changed files.", "The plan proposed adversarial cases before implementation."],
+      "lesson": "Use the frontier model where ambiguous causal reasoning has the highest value.", "dependsOn": ["baseline"]
+    },
+    {
+      "id": "qwen", "role": "Assigned worker", "assistant": "OpenCode", "model": "Qwen3.8-27B", "state": "failed", "outcome": "TIMEOUT · zero files changed", "seconds": 600.023, "meteredUsd": 0.1398604, "subscriptionTelemetryUsd": null,
+      "title": "Ten minutes of reasoning. No patch.", "summary": "Qwen read the isolated fixture and produced a tool trace, but never edited either allowed file before the fixed timeout.",
+      "evidence": ["The failure was preserved and not rerun.", "Changed paths: none.", "$0.1398604 metered through OpenRouter."],
+      "lesson": "A strong plan and a capable harness cannot guarantee that a model crosses the implementation boundary.", "dependsOn": ["plan"]
+    },
+    {
+      "id": "sonnet", "role": "Fallback worker", "assistant": "Claude Code", "model": "Claude Sonnet 5", "state": "accepted", "outcome": "PASS · two-file patch", "seconds": 285.363, "meteredUsd": null, "subscriptionTelemetryUsd": 0.6887406,
+      "title": "The fallback repairs the incident", "summary": "Sonnet restored version conflicts, monotonic delivery, stale-confirmation handling, and recovery after interruption, then authored nine discriminating regression tests.",
+      "evidence": ["Only store.mjs and regression.test.mjs changed.", "Worker suite passed 9/9.", "The unchanged external evaluator passed 8/8."],
+      "lesson": "Fallback is part of orchestration quality. It must be attributed separately from the failed worker.", "dependsOn": ["qwen"]
+    },
+    {
+      "id": "opus", "role": "Independent review", "assistant": "Claude Code", "model": "Claude Opus 5", "state": "findings", "outcome": "ACCEPT · 2 medium findings", "seconds": 277.801, "meteredUsd": null, "subscriptionTelemetryUsd": 0.688231,
+      "title": "Opus finds what green tests missed", "summary": "The fresh read-only review accepted the core fix but found that rollback could mask the original error and a defensive invalid-confirmation path could remain pending forever.",
+      "evidence": ["Review workspace changes: none.", "Verdict: ACCEPT with two medium hardening findings.", "The reviewer explicitly separated source reasoning from test evidence."],
+      "lesson": "Independent review earns its cost when it produces concrete counterexamples or hardening work.", "dependsOn": ["sonnet"]
+    },
+    {
+      "id": "sol", "role": "Integration repair", "assistant": "Codex", "model": "GPT-5.6 Sol", "state": "accepted", "outcome": "PASS · findings repaired", "seconds": 66.915, "meteredUsd": null, "subscriptionTelemetryUsd": null,
+      "title": "Sol closes the review loop", "summary": "Sol preserved the accepted worker patch, fixed both review findings, and added focused tests that exercised the hardening behavior.",
+      "evidence": ["Completed in 66.915 seconds.", "Final regression suite passed 11/11.", "The unchanged external evaluator remained 8/8."],
+      "lesson": "A review finding becomes useful only when it is resolved and the acceptance gate still passes.", "dependsOn": ["opus"]
+    },
+    {
+      "id": "glm", "role": "Independent audit", "assistant": "Pi", "model": "GLM 5.2", "state": "accepted", "outcome": "ACCEPT · read-only", "seconds": 70.243, "meteredUsd": 0.0355179156, "subscriptionTelemetryUsd": null,
+      "title": "A neutral harness audits the final invariants", "summary": "GLM traced recovery, stale events, idempotency, ordering, and terminal cancellation from the final source, while retaining the limitation that its read-only workspace could not execute external tests.",
+      "evidence": ["Served model recorded as z-ai/glm-5.2.", "No workspace changes and no delegation.", "$0.0355179156 final Pi usage cost."],
+      "lesson": "The strongest evidence combines an external gate with an independent source-level audit that states what it could not verify.", "dependsOn": ["sol"]
+    },
+    {
+      "id": "accepted", "role": "Final acceptance", "assistant": "Independent harness", "model": "Node test runner", "state": "accepted", "outcome": "PASS · 19/19 final checks", "seconds": null, "meteredUsd": null, "subscriptionTelemetryUsd": null,
+      "title": "The system accepts the result", "summary": "The final isolated patch passed eleven regression tests and all eight pre-existing external evaluator tests. The two validated hardening changes were then integrated into the Operations Lab.",
+      "evidence": ["Final regression: 11/11.", "External evaluator: 8/8.", "Total metered OpenRouter spend: $0.1753783156 of the approved $10 ceiling."],
+      "lesson": "Agent completion is not acceptance. The independent gate, scope record, and preserved failure decide the result.", "dependsOn": ["glm"]
+    }
+  ]
+}
